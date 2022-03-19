@@ -1,0 +1,104 @@
+<odoo>
+  <data>
+     <record model="ir.ui.view" id="res_config_settings_view_form">
+        <field name="name">res.config.settings.view.form.inherit.theme</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings_tab')]" position="inside">
+                <div class="tab" data-key="background_themes" role="tab">
+                    <div class="icon d-none d-md-block" style="background : url('static/description/icon.png') no-repeat center;background-size:contain;"></div>
+                    <span class="app_name">Customisation</span>
+                </div>
+            </xpath>
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Customization" string="Customisation" data-key="background_themes">
+                    <div id="CustomisationSettings">
+                        <h2>Customisation</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"></div>
+                                <div class="o_setting_right_pane">
+                                    <div class="row mt8">
+                                        <label class="o_form_label col-lg-5 o_light_label" for="nav_font_color"/>                  
+                                        <field name="nav_font_color"/>
+                                    </div>
+                                    <div class="row mt8">
+                                        <label class="o_form_label col-lg-5 o_light_label" for="nav_background_color"/>
+                                        <field name="nav_background_color"/>
+                                    </div>
+                                    <div class="row mt8">
+                                        <label class="o_form_label col-lg-5 o_light_label" for="background_color"/>
+                                        <field name="background_color"/>
+                                    </div>
+                                    <div class="row mt8">
+                                        <label class="o_form_label col-lg-5 o_light_label" for="company"/>
+                                        <field name="company"/>
+                                    </div>                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+      </field>
+    </record> 
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="background_themes.list">
+      <field name="name">background_themes list</field>
+      <field name="model">background_themes.background_themes</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="background_themes.action_window">
+      <field name="name">background_themes window</field>
+      <field name="res_model">background_themes.background_themes</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="background_themes.action_server">
+      <field name="name">background_themes server</field>
+      <field name="model_id" ref="model_background_themes_background_themes"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="background_themes" id="background_themes.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="background_themes.menu_1" parent="background_themes.menu_root"/>
+    <menuitem name="Menu 2" id="background_themes.menu_2" parent="background_themes.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="background_themes.menu_1_list" parent="background_themes.menu_1"
+              action="background_themes.action_window"/>
+    <menuitem name="Server to list" id="background_themes" parent="background_themes.menu_2"
+              action="background_themes.action_server"/>
+-->
+  </data>
+</odoo>
