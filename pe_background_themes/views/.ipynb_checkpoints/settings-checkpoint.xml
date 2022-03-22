@@ -14,10 +14,10 @@
                         <div class="row mt16 o_settings_container" name="background_theme_settings">
                             <div class="col-12 o_setting_box">
                                 <div class="o_setting_left_pane">
-                                    <field name="bg_image" widget="image"/>
+                                    <label string="Background Image" for="bg_image"/>
                                 </div>
                                 <div class="o_setting_right_pane">
-                                    <label string="Background Image" for="bg_image"/>
+                                    <field name="bg_image" widget="image"/>
                                 </div>
                             </div>
                         </div>

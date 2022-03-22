@@ -9,5 +9,5 @@ class ResCompany(models.Model):
     nav_background_color = fields.Char(string="Navbar Color", default="#FFFFFF")
     button_hover_color = fields.Char(string="Hover color", default="#FFFFFF")
     background_color = fields.Char(string="Backgroun color", default="#FFFFFF")
-    background_image = fields.Binary(string="Background Image(PE)", default="_get_default_image")
+    background_image = fields.Binary(string="Background Image(PE)", default="_get_default_image", attachment=True)
     

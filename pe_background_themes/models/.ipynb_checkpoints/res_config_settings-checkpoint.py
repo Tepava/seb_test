@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields,tools , api
 
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
         
-    nav_ft_color = fields.Char(string="NavBar Text Color", related="company_id.nav_font_color")
-    nav_bg_color = fields.Char(string="Navbar Color", related="company_id.nav_background_color")
-    btn_hover_color = fields.Char(string="Hover color", related="company_id.button_hover_color")
-    bg_color = fields.Char(string="Menu Background color", related="company_id.background_color")
-    bg_image = fields.Binary(string="Menu Background Image", related="company_id.background_image", attachment=True)
+    nav_ft_color = fields.Char(string="NavBar Text Color", related="company_id.nav_font_color", readonly=False)
+    nav_bg_color = fields.Char(string="Navbar Color", related="company_id.nav_background_color", readonly=False)
+    btn_hover_color = fields.Char(string="Hover color", related="company_id.button_hover_color", readonly=False)
+    bg_color = fields.Char(string="Menu Background color", related="company_id.background_color", readonly=False)
+    bg_image = fields.Binary(string="Menu Background Image", related="company_id.background_image", readonly=False)
     
     def get_value_from_company(self):
         values ={}
