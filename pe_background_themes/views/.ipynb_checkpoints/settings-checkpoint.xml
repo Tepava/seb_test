@@ -1,104 +1,74 @@
 <odoo>
   <data>
-     <record model="ir.ui.view" id="res_config_settings_view_form">
-        <field name="name">res.config.settings.view.form.inherit.theme</field>
+     <record model="ir.ui.view" id="background_them_settings_view_form">
+        <field name="name">background.theme.settings.view.form</field>
         <field name="model">res.config.settings</field>
-        <field name="priority" eval="10"/>
+        <field name="priority" eval="69"/>
         <field name="inherit_id" ref="base.res_config_settings_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[hasclass('settings_tab')]" position="inside">
-                <div class="tab" data-key="background_themes" role="tab">
-                    <div class="icon d-none d-md-block" style="background : url('static/description/icon.png') no-repeat center;background-size:contain;"></div>
-                    <span class="app_name">Customisation</span>
-                </div>
-            </xpath>
             <xpath expr="//div[hasclass('settings')]" position="inside">
-                <div class="app_settings_block" data-string="Customization" string="Customisation" data-key="background_themes">
+                <div class="app_settings_block" data-string="Customisation" string="Customisation" data-key="pe_background_themes">
                     <div id="CustomisationSettings">
                         <h2>Customisation</h2>
-                        <div class="row mt16 o_settings_container">
-                            <div class="col-12 col-lg-6 o_setting_box">
-                                <div class="o_setting_left_pane"></div>
+                        <!-- Bloc 1 -->
+                        <div class="row mt16 o_settings_container" name="background_theme_settings">
+                            <div class="col-12 o_setting_box">
+                                <div class="o_setting_left_pane">
+                                    <field name="bg_image" widget="image"/>
+                                </div>
                                 <div class="o_setting_right_pane">
-                                    <div class="row mt8">
-                                        <label class="o_form_label col-lg-5 o_light_label" for="nav_font_color"/>                  
-                                        <field name="nav_font_color"/>
-                                    </div>
-                                    <div class="row mt8">
-                                        <label class="o_form_label col-lg-5 o_light_label" for="nav_background_color"/>
-                                        <field name="nav_background_color"/>
-                                    </div>
-                                    <div class="row mt8">
-                                        <label class="o_form_label col-lg-5 o_light_label" for="background_color"/>
-                                        <field name="background_color"/>
-                                    </div>
-                                    <div class="row mt8">
-                                        <label class="o_form_label col-lg-5 o_light_label" for="company"/>
-                                        <field name="company"/>
-                                    </div>                    
+                                    <label string="Background Image" for="bg_image"/>
                                 </div>
                             </div>
                         </div>
+                        <!-- Bloc 1 -->
+                        
+                        <!-- Bloc 2 -->
+                        <!-- NavBar txt Color -->
+                        <div class="col-12 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="nav_ft_color" widget="color"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label string="Navbar text Color" for="nav_ft_color"/>
+                                <div class="text-muted">The color of the navigation bar text</div>
+                            </div>
+                        </div>
+                        <!-- NavBar bg Color -->
+                        <div class="col-12 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="nav_bg_color" widget="color"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label string="Navbar Color" for="nav_bg_color"/>
+                                <div class="text-muted">The color of the navigation bar</div>
+                            </div>
+                        </div>
+                        <!-- Button hover color -->
+                        <div class="col-12 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="btn_hover_color" widget="color"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label string="Hover Color" for="btn_hover_color"/>
+                                <div class="text-muted">The color of the button when you hover it</div>
+                            </div>
+                        </div>
+                        <!-- Backgroudn color -->
+                        <div class="col-12 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="bg_color" widget="color"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label string="Background Color" for="bg_color"/>
+                                <div class="text-muted">The color of the main menu background</div>
+                            </div>
+                        </div>
+                        <!-- Bloc 2 -->
                     </div>
                 </div>
             </xpath>
       </field>
     </record> 
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="background_themes.list">
-      <field name="name">background_themes list</field>
-      <field name="model">background_themes.background_themes</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
--->
-
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="background_themes.action_window">
-      <field name="name">background_themes window</field>
-      <field name="res_model">background_themes.background_themes</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="background_themes.action_server">
-      <field name="name">background_themes server</field>
-      <field name="model_id" ref="model_background_themes_background_themes"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
-
-    <!-- Top menu item -->
-<!--
-    <menuitem name="background_themes" id="background_themes.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="background_themes.menu_1" parent="background_themes.menu_root"/>
-    <menuitem name="Menu 2" id="background_themes.menu_2" parent="background_themes.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="background_themes.menu_1_list" parent="background_themes.menu_1"
-              action="background_themes.action_window"/>
-    <menuitem name="Server to list" id="background_themes" parent="background_themes.menu_2"
-              action="background_themes.action_server"/>
--->
   </data>
 </odoo>
