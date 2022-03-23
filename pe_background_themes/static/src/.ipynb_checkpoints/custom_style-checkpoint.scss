@@ -1,0 +1,60 @@
+$navbar-color : #6a329f !important;
+$navbar-txt-color : #000000 !important;
+$btn-hover-color : #351c75 !important;
+$background-color : #3d85c6 !important;
+
+.o_home_menu_background {
+    background: var(--background-image) !important;
+}
+
+.o_main_navbar{
+    background-color: var(--navbar-color)  !important;
+    border-bottom: 1px solid var(--navbar-color) !important;
+}
+
+.btn-fill-primary, .btn-primary {
+    color: var(--navbar-txt-color) !important;
+    background-color: var(--navbar-color) !important;
+    border-color: var(--navbar-color) !important;
+}
+.o_form_view .o_form_statusbar > .o_statusbar_status > .o_arrow_button.btn-primary.disabled:after, .o_form_view .o_form_statusbar > .o_statusbar_status > .o_arrow_button.btn-primary.disabled:before {
+    border-left-color: var(--navbar-color) !important;
+}
+.o_base_settings .o_setting_container .settings_tab {
+    background: var(--navbar-color) !important;
+}
+
+.o_base_settings .o_setting_container .settings_tab .selected {
+    background-color: var(--btn-hover-color) !important;
+    box-shadow: inset 2px 0 0 var(--navbar-color) !important;
+}
+.btn-outline-secondary, .btn-light, .o_form_view .o_statusbar_status .o_arrow_button:not(.disabled) {
+    color: var(--navbar-txt-color) !important;
+}
+
+.btn-light:not(:disabled):not(.disabled):active, .o_form_view .o_statusbar_status .o_arrow_button:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .o_form_view .o_statusbar_status .o_arrow_button:not(:disabled):not(.disabled).active, .show > .btn-light.dropdown-toggle, .o_form_view .o_statusbar_status .show > .dropdown-toggle.o_arrow_button:not(.disabled) {
+    color: var(--navbar-txt-color) !important;
+}
+
+.o_main_navbar .o_menu_brand, .o_main_navbar .o_menu_toggle, .o_main_navbar .o_navbar_apps_menu, .o_main_navbar > .o_menu_sections > div, .o_main_navbar > .o_menu_sections > div > a, .o_main_navbar .o_menu_systray > div, .o_main_navbar .o_menu_systray > div > a, .o_main_navbar .o_nav_entry, .o_main_navbar .o_menu_sections .o_nav_entry, .o_main_navbar .o_menu_systray .o_nav_entry, .o_main_navbar .dropdown .dropdown-toggle, .o_main_navbar .o_menu_sections .dropdown .dropdown-toggle, .o_main_navbar .o_menu_systray .dropdown .dropdown-toggle {
+    color: var(--navbar-txt-color) !important;
+}
+
+body{
+    color: var(--navbar-txt-color) !important;
+}
+
+.btn-secondary {
+    color: var(--navbar-txt-color) !important;
+}
+
+.o_list_view .o_list_table thead {
+    color: var(--navbar-txt-color) !important;
+}
+
+.text-900 {
+    color: var(--navbar-txt-color) !important;
+}
+.o_base_settings .o_setting_container .settings_tab .tab:hover, .o_base_settings .o_setting_container .settings_tab .tab.selected {
+    color: var(--navbar-txt-color) !important;
+}
