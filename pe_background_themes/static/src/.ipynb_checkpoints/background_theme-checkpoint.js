@@ -15,6 +15,7 @@ patch(NavBar.prototype, 'pe_background_themes/static/src/background_theme.js', {
      */
      setup() {
         this._super();
+        this._search_def = $.Deferred();
         this.colors = this.get_values();
     },
     
@@ -35,8 +36,12 @@ patch(NavBar.prototype, 'pe_background_themes/static/src/background_theme.js', {
                     document.documentElement.style.setProperty("--btn-hover-color",values.btn_hover_color);
                 }
                 
+                if (values.bg_color !== false){
+                    document.documentElement.style.setProperty("--background-color",values.bg_color);
+                }
+                
                 if (values.bg_image !== false){
-                    document.documentElement.style.setProperty("--background-color",'url(data:image/png;base64,'+values.bg_image+')');
+                    document.documentElement.style.setProperty("--background-image",'url(data:image/png;base64,'+values.bg_image+')');
                 }
             });
         },

@@ -13,13 +13,12 @@ class ResConfigSettings(models.TransientModel):
     
     def get_value_from_company(self):
         values ={}
-        
         image = self.env.user.company_id.pe_background_image
         values['nav_ft_color'] = self.env.user.company_id.nav_font_color
         values['nav_bg_color'] = self.env.user.company_id.nav_background_color
         values['btn_hover_color'] = self.env.user.company_id.button_hover_color
         values['bg_color'] = self.env.user.company_id.background_color
-        values['name'] = 
+        values['name2'] = self.env.company.name
         if not image:
             values['bg_image'] = self.env.user.company_id.logo
         else:
