@@ -1,0 +1,49 @@
+$navbar-color : #6a329f !important;
+$navbar-txt-color : #000000 !important;
+$btn-hover-color : #351c75 !important;
+$background-color : #3d85c6 !important;
+
+.o_home_menu_background {
+    background: var(--background-image) !important;
+    //background-size: cover !important;
+    background-repeat: no-repeat !important;
+    min-width: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    margin-top: 0;
+    position: fixed;
+    background-color : var(--background-color) ! important;
+}
+
+.o_main_navbar{
+    background-color: var(--navbar-color)  !important;
+    border-bottom: 1px solid var(--navbar-color) !important;
+}
+
+.btn-fill-primary, .btn-primary {
+    color: var(--navbar-txt-color) !important;
+    background-color: var(--navbar-color) !important;
+    border-color: var(--navbar-color) !important;
+}
+.o_form_view .o_form_statusbar > .o_statusbar_status > .o_arrow_button.btn-primary.disabled:after, .o_form_view .o_form_statusbar > .o_statusbar_status > .o_arrow_button.btn-primary.disabled:before {
+    border-left-color: var(--navbar-color) !important;
+}
+.o_base_settings .o_setting_container .settings_tab {
+    background: var(--navbar-color) !important;
+}
+
+.o_base_settings .o_setting_container .settings_tab .selected {
+    background-color: var(--btn-hover-color) !important;
+    box-shadow: inset 2px 0 0 var(--navbar-color) !important;
+}
+
+.o_list_view .o_list_table thead {
+    color: var(--navbar-txt-color) !important;
+}
+
+.text-900 {
+    color: var(--navbar-txt-color) !important;
+}
+.o_base_settings .o_setting_container .settings_tab .tab:hover, .o_base_settings .o_setting_container .settings_tab .tab.selected {
+    color: var(--navbar-txt-color) !important;
+}
