@@ -8,10 +8,10 @@
         <field name="arch" type="xml">
             <form>
                 <group>
-                    <field name="file"/>
+                    <field name="zipped"/>
                 </group>
                 <footer>
-                    <button name="button_import" string="Import Image" type="object" class="btn-primary"/>
+                    <button name="import_image" string="Import Image" type="object" class="btn-primary"/>
                     <button string="Cancel" class="btn-secondary" special="cancel"/>
                 </footer>
             </form>
